@@ -1,1 +1,2 @@
-# Rocket Academy Coding Bootcamp: Base MVC
+# Car Rental App (Backend) 
+### Express, Sequelize, Postgres
