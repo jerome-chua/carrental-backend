@@ -21,6 +21,7 @@ module.exports = {
         photo: carPhotos[i],
         seats: randomSeatNum(),
         rating: randomRating(),
+        // available : { monday: true, tuesday: false, etc. },
         created_at: new Date(),
         updated_at: new Date(),
       });
