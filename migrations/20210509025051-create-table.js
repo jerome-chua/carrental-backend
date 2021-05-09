@@ -43,10 +43,10 @@ module.exports = {
         },
         type: Sequelize.INTEGER,
       },
-      pickup_location: {
+      pickup: {
         type: Sequelize.TEXT,
       },
-      dropoff_location: {
+      dropoff: {
         type: Sequelize.TEXT,
       },
       pickup_date: {
@@ -69,7 +69,7 @@ module.exports = {
   },
 
   down: async (queryInterface) => {
-    await queryInterface.dropTable('cars');
     await queryInterface.dropTable('bookings');
+    await queryInterface.dropTable('cars');
   },
 };
