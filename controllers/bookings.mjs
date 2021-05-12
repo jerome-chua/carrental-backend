@@ -1,13 +1,18 @@
 export default function initBookingsController(db) {
-  const getBookings = async (req, res) => {
+  const confirmBooking = async (req, res) => {
+    const { bookingData } = req.body;
+    console.log('========== booking =========:', req.body);
     try {
-      console.log('testg');
+      const booking = await db.Booking.create(bookingData, { returning: true });
+      console.log(booking);
+
+      res.send('Booking Success!');
     } catch (err) {
       console.log(err);
     }
   };
 
   return {
-    getBookings,
+    confirmBooking,
   };
 }

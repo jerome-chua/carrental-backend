@@ -8,5 +8,5 @@ export default function bindRoutes(app) {
   const bookingsController = initBookingsController(db);
 
   app.get('/getcars', carsController.getCars);
-  app.get('/getbookings', bookingsController.getBookings);
+  app.post('/confirmbooking', bookingsController.confirmBooking);
 }

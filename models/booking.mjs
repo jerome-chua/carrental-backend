@@ -1,5 +1,5 @@
 export default function bookingModel(sequelize, DataTypes) {
-  return sequelize.define('cars', {
+  return sequelize.define('bookings', {
     id: {
       allowNull: false,
       autoIncrement: true,
@@ -20,11 +20,9 @@ export default function bookingModel(sequelize, DataTypes) {
       type: DataTypes.TEXT,
     },
     pickupDate: {
-      allowNull: false,
       type: DataTypes.DATE,
     },
     returnDate: {
-      allowNull: false,
       type: DataTypes.DATE,
     },
     createdAt: {
